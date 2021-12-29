@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <style>
+        .container {
+            background-color: blanchedalmond;
+            height: 50vh;
+            width: 50%;
+            margin: auto;
+        }
+        
+        .joke {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h3> Best jokes to make your day</h3>
+        <div id="joke" class="joke">
+            Awsome Joke is loadding
+        </div>
+        <button id="jokebtn" class="btn">Next</button>
+    </div>
+
+    <script>
+        // GET https://icanhazdadjoke.com/slack
+
+        const jokes = document.querySelector('#joke');
+        const jokebtn = document.querySelector('#jokebtn');
+
+        // const generatejokes = () => {
+        //     const setHeader = {
+        //         headers: {
+        //             Accept: "application/json"
+        //         }
+        //     }
+        //     fetch('https://icanhazdadjoke.com/', setHeader)
+        //         .then((res) => res.json())
+        //         .then((data) => {
+        //             jokes.innerHTML = data.jokes;
+        //         }).catch((error) => {
+        //             console.log(error);
+        //         })
+        // }
+        const generatejokes = async() => {
+            try {
+                const setHeader = {
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+                const res = await fetch('https://icanhazdadjoke.com/', setHeader);
+
+                const data = await res.json();
+                jokes.innerHTML = data.jokes;
+            } catch (error) {
+                console.log(`The error is ${error}`);
+            }
+        }
+
+
+        jokebtn.addEventListener('click', generatejokes);
+        generatejokes();
+    </script>
+</body>
+
+</html>

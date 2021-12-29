@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div>
+            <p>A function is triggred when the user is pressing a key in the input feild</p>
+            <br>
+            <input type="text" name="" id="" onkeypress="keypress()" onkeyup="keyup()" onkeydown="keydown()">
+            <p id="keys"></p>
+        </div>
+    </div>
+
+
+    <label for="name">Name</label>
+    <input type="text" name="" id="ice">
+
+    <label for="">Chose an icecream Flavour</label>
+    <select name="icecream" id="icecream">
+        
+<option value=" ">Select one</option>
+<option value="chocolate ">chocolate</option>
+<option value="vanila ">Vanila</option>
+<option value="Sardine ">Sardine</option>
+    </select>
+    <div class="result ">
+
+    </div>
+
+    <input type="color" name="" id="">
+
+
+    <script>
+        // const selectElement = () => {
+        //     const inputchange = document.getElementById('ice').value;
+        //     const select = document.getElementById('icecream').value;
+        //     const result = document.getElementById('result');
+        //     result.innerHTML = ` Mr ${inputchange} and  chose ${select} flavour`;
+        //     // console.log(` ${inputchange} and he/her chose ${select}`);
+        // }
+        const select = document.getElementById('icecream');
+        select.addEventListener('change', () => {
+            const inputchange = document.getElementById('ice').value;
+            const result = document.getElementById('result');
+            // result.innerHTML = ` Mr ${inputchange} and he is Select ${select} flavour `;
+            result.innerHTML = 'Mr' + inputchange, 'and select' + select;
+        })
+    </script>
+
+
+
+    <script>
+        // const keypress = () => {
+        //         document.getElementById('keys').innerHTML = `you press ${event.key} and its code is ${event.code}`;
+        //     }
+        // const keydown = () => {
+        //     document.getElementById('keys').innerHTML = "key is down ";
+        // }
+        // const keyup = () => {
+        //     document.getElementById('keys').innerHTML = 'key is up';
+        // }
+    </script>
+
+
+
+</body>
+
+</html>

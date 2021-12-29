@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .box {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Diff types of html Events </h1>
+
+    <!-- An html event can be something the browser does,or something a user does. Here are someExample of html events:
+    An Html webpage has finish loading 
+    an input felid was change 
+    an Html  button was click
+    offten when events happen ,you may want to do something -->
+    <!-- javascript lets you execute code  when events are detected -->
+    <!-- html allows event handler attributes,with javascript code to be added to html elements -->
+    <!-- there are 4 way to writing events in javascript -->
+    <!-- using inline event alerts(); by calling a function;   -->
+
+    <a href="#" onclick="alert('i am awsome ,but no one use me')">simple onclick event</a>
+    <button type="button" onclick="onclickevent()">click me</button>
+    <button type="button" id="thirdway"> 3rdway </button>
+    <button type="button" id="forthway"> 4rth way </button>
+
+
+
+    <!-- by calling function -->
+    <script>
+        // second way of writting
+        // function
+        // let onclickevent = () => {
+        //     alert("most common use event by calling function");
+        // }
+        // // 3rd way of writting a function
+        // const thirdway = document.getElementById('thirdway');
+        // thirdway.onclick = function() {
+        //         alert("most common use event by calling function");
+        //     }
+        //     // 4th way to writing event
+        // const forthway = document.querySelector('#forthway');
+        // forthway.addEventListener('click', () => {
+        //     alert("The love this way of writting function");
+        // });
+    </script>
+
+    <!-- Event objects -->
+    <!-- event object is the parent object of the event object mouse event ,focous event , keyboard event etc. -->
+
+
+    <script>
+        const fourthway = document.getElementById('forthway');
+        const checkEvent = () => {
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+        fourthway.addEventListener('click', checkEvent);
+    </script>
+
+    <div class="main-div">
+        <div class="box"></div>
+    </div>
+    <script>
+        const menter = document.getElementById('box');
+        menter.addEventListener('mouseenter', () => {
+            menter.style.backgroundColor = 'red';
+            console.log('Mouse Enter bro');
+        });
+        menter.addEventListener('mouseleave', () => {
+            console.log('Mouse leave Bro');
+            menter.style.backgroundColor = 'pink';
+
+        });
+    </script>
+</body>
+
+</html>

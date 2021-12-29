@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+</head>
+
+<body>
+
+    <p id="myp" onmousedown="mousedown()" onmouseup="mouseup()"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt obcaecati dolorum unde nemo quibusdam veniam expedita sed dicta repellat, beatae possimus placeat aut adipisci minus suscipit, accusantium, officia impedit dolore! Lorem ipsum dolor
+        sit amet consectetur, adipisicing elit. Voluptates deleniti delectus nostrum culpa placeat, dolorem iste facere tempore ullam iusto ducimus, error qui dolore nulla fugiat ipsam vel quod quidem. </p>
+
+    <script>
+        const mousedown = () => {
+            document.getElementById('myp').style.color = "red";
+        }
+        const mouseup = () => {
+            document.getElementById('myp').style.color = "Green";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+
+    <p class="para"> My Name is Hassan</p>
+    <p class="para"> I am Web and Web App Developer </p>
+    <p> Dont Forgot to contact me </p>
+    <h1 id="heading"> chamge the content of H1 </h1>
+
+    <button onclick="changeContent()"> Click me</button>
+    <script>
+        const changeContent = () => {
+                // document.getElementById('heading').innerHTML = "you are done";
+                // 2nd method
+                // const headingchange = document.getElementById('heading');
+                // headingchange.innerHTML = "Congrulation you are done";
+                // document.getElementsByClassName('para');
+                // console.log(document.getElementsByClassName('para'));
+                // console.log(document.getElementsByTagName('p'));
+
+                // console.log(document.getElementsByName('gender'));
+
+                // querySelector return the first matching value if class name is same
+                //where querySelector ALl will return all the elements
+                // document.querySelector('#heading').innerHTML = "I change again";
+                // document.querySelector('.para').innerHTML = "I change again with querySelector ";
+                console.log(document.querySelectorAll('.para'));
+
+                // interview question
+                // diff btw querySelector and getElementbyid
+                // document.getElementById();
+                // return a refrence to the elements by its id;
+                // if the elements its not the id is not in the document
+                // it will
+                // return null
+                // what is querySelector();
+                // document.querySelector(selector);
+                // return the first element within the document
+                // if not match it return no found
+
+
+
+
+            }
+            // what is event Object
+    </script>
+    <form action="">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="">
+        <label for="female">Malefemale</label>
+        <input type="radio" name="gender" id="">
+    </form>
+</body>
+
+</html>

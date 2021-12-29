@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment counter</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        .counter-container {
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="counter-container">
+        <i class="fas fa-mug-hot fa-5x"></i>
+        <div class="counter" data-target="4000"></div>
+        <span>Project Completed</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-users fa-5x"></i>
+        <div class="counter" data-target="15000"></div>
+        <span>Our Happy clients</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-tasks fa-5x"></i>
+        <div class="counter" data-target="500"></div>
+        <span>OnGoing Projects</span>
+    </div>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach((counter) => {
+            // console.log(counter);
+            counter.innerHTML = 0;
+            const updatecounter = () => {
+                const targetCount = +counter.getAttribute('data-target');
+                console.log(targetCount);
+                const startingCount = Number(counter.innerHTML);
+                const incr = targetCount / 100;
+                if (startingCount < targetCount) {
+                    counter.innerHTML = ` ${Math.round ( startingCount + incr) } `;
+                    setTimeout(updatecounter, 100);
+                } else {
+                    counter.innerHTML = targetCount;
+                }
+
+            }
+            updatecounter();
+        })
+    </script>
+</body>
+
+</html>

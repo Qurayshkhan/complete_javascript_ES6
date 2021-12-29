@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Call</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+    </div>
+
+
+    <script>
+        const container = document.querySelectorAll('#container');
+        const request = new XMLHttpRequest();
+        request.open('GET', 'https//services.bluekai.com / rest / countries/name/united-state');
+        request.send();
+
+        request.addEventListener('load', function() {
+            // console.log(this.responseText);
+            const data = JSON.parse(this.responseText);
+            // console.log(data.capital);
+
+
+        })
+    </script>
+
+</body>
+
+</html>

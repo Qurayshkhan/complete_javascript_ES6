@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermameter Animated</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <h1> I am Thermameter <span style="height: 50px;" id="temp" class="fa"></span> </h1>
+
+
+
+
+    <script>
+        const tempload = () => {
+            let temp = document.getElementById('temp');
+            temp.innerHTML = ' &#xf2cb';
+            temp.style.color = "#f8b627";
+            setTimeout(() => {
+                temp.innerHTML = '&#xf2ca';
+            }, 1000)
+            setTimeout(() => {
+                temp.innerHTML = '&#xf2c9';
+            }, 2000)
+            setTimeout(() => {
+                temp.innerHTML = '&#xf2c8';
+            }, 3000)
+            setTimeout(() => {
+                temp.innerHTML = '&#xf2c7';
+                temp.style.color = "red";
+            }, 4000)
+        }
+        tempload();
+        setInterval(tempload, 5000);
+
+
+        // setInterval(() => {
+        //     temp.innerHTML = ' &#xf2cb';
+        // }, 5000);
+    </script>
+</body>
+
+</html>
